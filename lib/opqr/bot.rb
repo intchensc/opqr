@@ -5,13 +5,12 @@ require_relative 'api'
 module OPQ
   class Bot
     attr_accessor :observer, :ws
-    def initialize(api_url, http_port, websocket_port, observers)
+    def initialize(api_url, http_port, observers)
       $http_port = http_port
-      $websocket_port = websocket_port
       $api_url = api_url
       @observer = Observer.new(observers)
       puts "[BOT] 正在尝试连接WS，请稍等~"
-      @ws = WsServer.new(api_url,websocket_port, @observer)
+      @ws = WsServer.new(@observer)
     end
   end
 end

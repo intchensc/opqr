@@ -9,5 +9,5 @@ ps.load_all(plugin_dir)
 # 功能请在插件目录添加插件实现
 ob = []
 ob << OPQ::QqObj.new(1294222408,ps.plugins)
-bot = OPQ::Bot.new("127.0.0.1",8086,8081,ob)
+bot = OPQ::Bot.new("127.0.0.1",8086,ob)
 
