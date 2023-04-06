@@ -1,0 +1,32 @@
+PATH
+  remote: .
+  specs:
+    opqr (0.1.0)
+      websocket-eventmachine-server (~> 1.0)
+
+GEM
+  remote: https://gems.ruby-china.com/
+  specs:
+    eventmachine (1.2.7)
+    minitest (5.17.0)
+    rake (13.0.6)
+    websocket (1.2.9)
+    websocket-eventmachine-base (1.2.0)
+      eventmachine (~> 1.0)
+      websocket (~> 1.0)
+      websocket-native (~> 1.0)
+    websocket-eventmachine-server (1.0.1)
+      websocket-eventmachine-base (~> 1.0)
+    websocket-native (1.0.0)
+
+PLATFORMS
+  x64-mingw-ucrt
+
+DEPENDENCIES
+  minitest (~> 5.0)
+  opqr!
+  rake (~> 13.0)
+  websocket-eventmachine-server (~> 1.0)
+
+BUNDLED WITH
+   2.4.10
