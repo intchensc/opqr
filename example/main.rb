@@ -2,6 +2,7 @@
 require 'opqr'
 # 加载插件
 plugin_dir = File.join(File.dirname(__FILE__), 'plugins')
+# p plugin_dir
 ps = OPQ::PluginLoader.new
 ps.load_all(plugin_dir)
 # 必须是个数组
@@ -10,4 +11,5 @@ ps.load_all(plugin_dir)
 ob = []
 ob << OPQ::QqObj.new(1294222408,ps.plugins)
 bot = OPQ::Bot.new("127.0.0.1",8086,ob)
+bot.run
 

@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency 'faye-websocket', '~> 0.11.2'
+  spec.add_dependency 'minitest', '~> 5.0'
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
 end

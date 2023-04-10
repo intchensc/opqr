@@ -9,8 +9,10 @@ module OPQ
       $http_port = http_port
       $api_url = api_url
       @observer = Observer.new(observers)
+    end
+    def run
       puts "[BOT] 正在尝试连接WS，请稍等~"
-      @ws = WsServer.new(@observer)
+      @ws = WsServer.new(@observer).start
     end
   end
 end

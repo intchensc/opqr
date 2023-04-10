@@ -18,7 +18,10 @@ module OPQ
     end
 
     def on_message_received(msg)
-      notify_observers(msg)
+      j = JSON.parse(msg)
+      if (msg_type = j['CurrentPacket']['EventData']['MsgHead']['MsgType'] != 732)
+       notify_observers(msg)
+      end
     end
   end
 end
