@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 module OPQ
   class PluginBase
+    attr_accessor :plugin_dir
     def receive_qq(qq, msg) ;end
     def receive_group(qq, msg);end
   end
@@ -17,8 +18,13 @@ module OPQ
         plugin_class = Object.const_get("#{plugin_name}")
         @plugins << plugin_class.new
       end
-      puts "[BOT] 插件加载完毕！" + @plugins.map { |p| p.class.name}.to_s
+      puts "[BOT] 插件加载完毕！"
+      row = []
+      @plugins.map do |p|
+        row << [p.plugin_name, p.plugin_version, p.plugin_author]
+      end
+      table = Terminal::Table.new(:title => "插件列表",:headings=>["名称","版本","作者"],:rows=>row )
+      puts table
     end
-
   end
 end

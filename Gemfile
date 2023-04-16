@@ -10,3 +10,5 @@ gem "rake", "~> 13.0"
 gem "minitest", "~> 5.0"
 
 gem 'faye-websocket', '~> 0.11.2'
+
+gem 'terminal-table', '~> 3.0'

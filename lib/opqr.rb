@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require 'eventmachine'
 require 'faye/websocket'
+require 'terminal-table'
 require_relative 'opqr/observer'
 require_relative 'opqr/api'
 require_relative 'opqr/wsserver'

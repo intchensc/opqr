@@ -1,5 +1,9 @@
 # frozen_string_literal: true
-require 'opqr'
+$:.unshift "../lib"
+require_relative '../lib/opqr'
+# 请使用下面加载依赖（上方请注释）
+# require 'opqr'
+
 # 加载插件
 plugin_dir = File.join(File.dirname(__FILE__), 'plugins')
 # p plugin_dir

@@ -15,7 +15,7 @@ module OPQ
         # 1好友 2群组
         if receive.type == 1
           p.receive_qq(@qq, receive)
-        elsif receive.type == 2 && receive.sender_uin != @qq && receive.msg_type != 732
+        elsif receive.type == 2 && receive.sender_uin != @qq && receive.msg_type != 732 && p.plugin_allow_group.include?(receive.from_uin)
           p.receive_group(@qq, receive)
         end
       end

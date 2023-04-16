@@ -9,7 +9,6 @@ module OPQ
     def start
       EM.run {
         ws = Faye::WebSocket::Client.new('ws://'+$api_url.to_s+':'+$http_port.to_s+'/ws')
-        p "我到了ws里面"
         ws.on :open do |event|
           puts "[WS] 连接已建立"
         end
