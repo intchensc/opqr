@@ -22,3 +22,7 @@ gem install opqr
 ```ruby
 ruby main.rb
 ```
+## 开发进度
+- [x] 好友消息监听
+- [x] 群收消息监听
+- [ ] 好友发文件

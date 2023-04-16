@@ -8,6 +8,6 @@ class TestOpqr < Minitest::Test
   end
 
   def test_it_does_something_useful
-    assert false
+    assert true ,'失败'
   end
 end

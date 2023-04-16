@@ -5,7 +5,10 @@ module OPQ
       @type = msg['CurrentPacket']['EventData']['MsgHead']['FromType']
       @from_uin = msg['CurrentPacket']['EventData']['MsgHead']['FromUin']
       @sender_uin = msg['CurrentPacket']['EventData']['MsgHead']['SenderUin']
-      @text = msg['CurrentPacket']['EventData']['MsgBody']['Content']
+      @text = msg.fetch('CurrentPacket', {})
+                  .fetch('EventData', {})
+                  .fetch('MsgBody', {})
+                  .fetch('Content', {})
       @msg_type = msg['CurrentPacket']['EventData']['MsgHead']['MsgType']
       @raw_json = msg
     end
